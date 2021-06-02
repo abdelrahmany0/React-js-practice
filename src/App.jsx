@@ -1,9 +1,11 @@
 import './App.css';
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom'
-import Cart from './components/cart/Cart'
+import axios from "axios";
 
 import 'bootstrap/dist/css/bootstrap.min.css'
+
+import Cart from './components/cart/Cart'
 import Navbar from "./components/layoutComponents/navbar/Navbar";
 import ProductDetails from "./components/productDetails/ProductDetails";
 import Home from "./components/Home/Home";
@@ -21,6 +23,16 @@ class App extends Component {
                 {id: 3, name: 'test2', quantity: 2},
             ],
         }
+    }
+
+    async componentDidMount() {
+        // const promise = fetch('https://jsonplaceholder.typicode.com/posts')
+        // console.log(promise)
+        // const res = promise.then(response => response.json())
+        // console.log(res)
+        // res.then(json => console.log(json))
+        // const { data } = await axios.get('https://jsonplaceholder.typicode.com/posts')
+        // console.log(data)
     }
 
     deleteItem = (product) => {
@@ -83,8 +95,8 @@ class App extends Component {
                                 )}
                         />
 
-                        <Route path='/about' exact component={About} />
-                        <Route path='/login' exact component={Login} />
+                        <Route path='/about' exact component={About}/>
+                        <Route path='/login' exact component={Login}/>
 
                         <Route path='/home' exact component={Home}/>
                         <Redirect from='/' to='/home'/>
