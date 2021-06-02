@@ -23,7 +23,7 @@ class About extends Component {
 
                     <div className="col">
                             <Route exact path='/about/team' component={Team}/>
-                            <Route  exact path='/about/company' component={Company}/>
+                            <Route exact path='/about/company' component={Company}/>
                     </div>
                 </div>
             </Router>

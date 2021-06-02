@@ -1,0 +1,27 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+
+  "products": [
+    {"id": 1, "name": "Burger", "price": 30, "quantity": 0, "isInCart": false},
+    {"id": 2, "name": "Fries", "price": 20, "quantity": 0, "isInCart": false},
+    {"id": 3, "name": "Cola", "price": 10, "quantity": 0, "isInCart": false},
+    {"name": "Water", "price": "5", "quantity": 0, "isInCart": false, "id": 4}
+  ]
+
+}

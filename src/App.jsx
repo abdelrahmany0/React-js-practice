@@ -17,11 +17,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            cart_items: [
-                {id: 1, name: 'test0', quantity: 1},
-                {id: 2, name: 'test1', quantity: 4},
-                {id: 3, name: 'test2', quantity: 2},
-            ],
+            cart_items: [],
         }
     }
 
@@ -33,6 +29,10 @@ class App extends Component {
         // res.then(json => console.log(json))
         // const { data } = await axios.get('https://jsonplaceholder.typicode.com/posts')
         // console.log(data)
+
+        const { data } = await axios.get('http://localhost:3000/products')
+        this.setState({cart_items: data})
+        console.log(this.state.cart_items)
     }
 
     deleteItem = (product) => {
